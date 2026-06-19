@@ -4,85 +4,144 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enlighten Life</title>
-<style>
-body{margin:0;background:#f7f2ea;color:#2f2b25;font-family:Georgia,"Noto Serif KR",serif;line-height:1.7}
-.hero{padding:90px 22px 70px;text-align:center;background:#efe6d8}
-.hero h1{font-size:46px;line-height:1.1;margin:0}
-.hero p{font-size:18px;color:#6f665c;margin-top:24px}
-nav{background:#fffaf2;text-align:center;padding:18px 10px}
-nav a{display:inline-block;margin:6px 10px;color:#3f382f;text-decoration:none;font-size:16px}
-.wrap{max-width:760px;margin:auto;padding:42px 18px}
-.intro{text-align:center;font-size:20px;margin-bottom:42px}
-.card{background:#fffaf3;border-radius:22px;padding:26px 22px;margin-bottom:24px;box-shadow:0 10px 28px rgba(0,0,0,.06)}
-.card h2{font-size:25px;margin:0 0 12px;line-height:1.4}
-.card p{font-size:17px;color:#665d52;margin:0}
-.quote{text-align:center;font-size:20px;font-style:italic;color:#6b6258;margin:55px 0}
-footer{text-align:center;padding:40px;color:#897f73;font-size:14px}
 
-@media (min-width:700px){
-.hero h1{font-size:64px}
-.hero p{font-size:22px}
-.intro{font-size:24px}
-.card h2{font-size:30px}
-.card p{font-size:19px}
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#f5efe6;
+  color:#2d2923;
+  font-family:Georgia,"Noto Serif KR",serif;
+  line-height:1.7;
+}
+.hero{
+  padding:72px 20px 58px;
+  text-align:center;
+  background:linear-gradient(180deg,#efe4d4,#f8f2ea);
+}
+.hero h1{
+  margin:0;
+  font-size:42px;
+  line-height:1.1;
+}
+.hero p{
+  margin-top:20px;
+  font-size:17px;
+  color:#6d6258;
+}
+nav{
+  background:#fffaf2;
+  padding:14px 10px;
+  text-align:center;
+  border-bottom:1px solid #eee2d3;
+}
+nav a{
+  display:inline-block;
+  margin:5px 8px;
+  font-size:15px;
+  color:#403a33;
+  text-decoration:none;
+}
+main{
+  max-width:720px;
+  margin:0 auto;
+  padding:36px 18px;
+}
+.intro{
+  text-align:center;
+  font-size:18px;
+  color:#3d362f;
+  margin-bottom:34px;
+}
+.card{
+  background:#fffaf3;
+  border-radius:20px;
+  padding:24px 20px;
+  margin-bottom:18px;
+  box-shadow:0 8px 22px rgba(0,0,0,.06);
+}
+.card h2{
+  margin:0 0 10px;
+  font-size:23px;
+  line-height:1.35;
+}
+.card p{
+  margin:0;
+  font-size:16px;
+  color:#665d52;
+}
+.quote{
+  text-align:center;
+  margin:48px 0 20px;
+  font-size:18px;
+  color:#6b6258;
+  font-style:italic;
+}
+footer{
+  text-align:center;
+  padding:36px 20px;
+  font-size:14px;
+  color:#897f73;
 }
 </style>
 </head>
 
 <body>
+
 <section class="hero">
-<h1>Enlighten<br>Life</h1>
-<p>삶 전체가 명상이 되는 길</p>
+  <h1>Enlighten<br>Life</h1>
+  <p>삶 전체가 명상이 되는 길</p>
 </section>
 
 <nav>
-<a href="#meditation">명상</a>
-<a href="#coffee">커피</a>
-<a href="#family">부모님</a>
-<a href="#travel">여행</a>
-<a href="#poem">시</a>
+  <a href="#meditation">명상</a>
+  <a href="#coffee">커피</a>
+  <a href="#family">부모님</a>
+  <a href="#travel">여행</a>
+  <a href="#poem">시</a>
 </nav>
 
-<div class="wrap">
-<div class="intro">
-본래의 고요로 돌아가는 삶,<br>
-그리고 깨어 있음 속에서 살아가는 일상.<br>
-인라이튼 라이프는 삶 전체가 명상이 되는 길을 기록합니다.
-</div>
+<main>
+  <section class="intro">
+    본래의 고요로 돌아가는 삶,<br>
+    그리고 깨어 있음 속에서 살아가는 일상.<br>
+    인라이튼 라이프는 삶 전체가 명상이 되는 길을 기록합니다.
+  </section>
 
-<div class="card" id="meditation">
-<h2>🌿 명상가의 기록</h2>
-<p>명상과 깨어 있음, 그리고 내면의 고요로 돌아가는 여정을 기록합니다.</p>
-</div>
+  <section class="card" id="meditation">
+    <h2>🌿 명상가의 기록</h2>
+    <p>명상과 깨어 있음, 그리고 내면의 고요로 돌아가는 여정을 기록합니다.</p>
+  </section>
 
-<div class="card" id="coffee">
-<h2>☕ 커피로 살아온 시간</h2>
-<p>커피를 볶고 내리며 살아온 시간, 향기 속에 남은 사람과 추억을 담습니다.</p>
-</div>
+  <section class="card" id="coffee">
+    <h2>☕ 커피로 살아온 시간</h2>
+    <p>커피를 볶고 내리며 살아온 시간, 향기 속에 남은 사람과 추억을 담습니다.</p>
+  </section>
 
-<div class="card" id="family">
-<h2>👨‍👩‍👦 부모님과 함께한 이야기</h2>
-<p>가족과 사랑, 부모님의 생의 빛과 함께한 시간을 조용히 기록합니다.</p>
-</div>
+  <section class="card" id="family">
+    <h2>👨‍👩‍👦 부모님과 함께한 이야기</h2>
+    <p>가족과 사랑, 부모님의 생의 빛과 함께한 시간을 조용히 기록합니다.</p>
+  </section>
 
-<div class="card" id="travel">
-<h2>🚶 여행과 사색</h2>
-<p>길 위에서 만난 풍경, 자연, 침묵, 그리고 삶의 깨달음을 담습니다.</p>
-</div>
+  <section class="card" id="travel">
+    <h2>🚶 여행과 사색</h2>
+    <p>길 위에서 만난 풍경, 자연, 침묵, 그리고 삶의 깨달음을 담습니다.</p>
+  </section>
 
-<div class="card" id="poem">
-<h2>✨ 삶의 통찰과 시</h2>
-<p>시와 에세이, 삶을 바라보는 깊은 시선과 성찰을 모읍니다.</p>
-</div>
+  <section class="card" id="poem">
+    <h2>✨ 삶의 통찰과 시</h2>
+    <p>시와 에세이, 삶을 바라보는 깊은 시선과 성찰을 모읍니다.</p>
+  </section>
 
-<div class="quote">
-“깊은 숨이 시작되는 순간,<br>
-마음은 본래의 고요로 돌아갑니다.”
-</div>
-</div>
+  <div class="quote">
+    “깊은 숨이 시작되는 순간,<br>
+    마음은 본래의 고요로 돌아갑니다.”
+  </div>
+</main>
 
 <footer>
-Enlighten Life · 인라이튼 라이프
+  Enlighten Life · 인라이튼 라이프
 </footer>
+
 </body>
 </html>

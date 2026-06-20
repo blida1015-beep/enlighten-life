@@ -7,26 +7,161 @@
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f5efe6;color:#2d2923;font-family:Georgia,"Noto Serif KR",serif;line-height:1.8}
-header{padding:80px 22px 60px;text-align:center;background:linear-gradient(#eadfce,#f8f2ea)}
-header h1{margin:0;font-size:44px;line-height:1.1;letter-spacing:.5px}
-header .sub{margin-top:16px;font-size:18px;color:#6b6258}
-header .intro{max-width:620px;margin:30px auto 0;font-size:16px;color:#6b6258}
-nav{position:sticky;top:0;z-index:20;background:#fffaf2;border-bottom:1px solid #e4d8c8;text-align:center;padding:12px 6px}
-nav a{display:inline-block;margin:4px 7px;color:#3b352d;text-decoration:none;font-size:14px}
-main{max-width:780px;margin:auto;padding:32px 16px}
-section{background:#fffaf3;border-radius:24px;padding:30px 24px;margin-bottom:30px;box-shadow:0 10px 24px rgba(80,60,40,.07)}
-section h2{font-size:23px;line-height:1.4;margin:0 0 14px;word-break:keep-all}
-.desc{font-size:15px;color:#6b6258;margin-bottom:24px}
-details{border-top:1px solid #e5dccf;padding:15px 0}
-summary{cursor:pointer;font-size:17px;font-weight:bold;line-height:1.5;word-break:keep-all}
-details p{font-size:15px;color:#6b6258;margin:12px 0 0}
-.closing{text-align:center;font-size:17px;color:#6b6258;margin:45px 0}
-footer{text-align:center;color:#8a8178;font-size:13px;padding:34px 10px}
-@media(min-width:700px){
-header h1{font-size:58px}
-section h2{font-size:30px}
-summary{font-size:20px}
+body{
+  margin:0;
+  background:#f7f1e8;
+  color:#2d2923;
+  font-family:Georgia,"Noto Serif KR",serif;
+  line-height:1.75;
+}
+a{color:inherit;text-decoration:none}
+header{
+  padding:86px 22px 70px;
+  text-align:center;
+  background:linear-gradient(#e9decc,#faf5ed);
+}
+header h1{
+  margin:0;
+  font-size:52px;
+  line-height:1;
+  letter-spacing:-1px;
+}
+header p{
+  margin:24px auto 0;
+  max-width:520px;
+  font-size:18px;
+  color:#6b6258;
+}
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#fffaf3;
+  border-bottom:1px solid #e4d8c8;
+  text-align:center;
+  padding:13px 8px;
+}
+nav a{
+  display:inline-block;
+  margin:4px 9px;
+  font-size:15px;
+  color:#4a433a;
+}
+main{
+  max-width:920px;
+  margin:auto;
+  padding:36px 18px;
+}
+.section-title{
+  font-size:13px;
+  letter-spacing:2px;
+  color:#8a8178;
+  margin:28px 0 18px;
+  text-transform:uppercase;
+}
+.feature{
+  background:#fffaf3;
+  border-radius:30px;
+  overflow:hidden;
+  margin-bottom:38px;
+  box-shadow:0 18px 40px rgba(70,50,30,.08);
+}
+.feature-img{
+  height:250px;
+  background:linear-gradient(135deg,#d9c7aa,#f8efe2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:54px;
+}
+.feature-body{
+  padding:30px 26px 34px;
+}
+.date{
+  font-size:13px;
+  color:#9a8f83;
+  margin-bottom:10px;
+}
+.feature h2{
+  margin:0 0 14px;
+  font-size:31px;
+  line-height:1.35;
+}
+.feature p{
+  margin:0;
+  color:#6b6258;
+  font-size:17px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+}
+.card{
+  background:#fffaf3;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 10px 28px rgba(70,50,30,.06);
+}
+.thumb{
+  height:145px;
+  background:linear-gradient(135deg,#eee1ce,#fbf6ee);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:42px;
+}
+.card-body{
+  padding:22px 22px 26px;
+}
+.card h3{
+  margin:0 0 10px;
+  font-size:24px;
+  line-height:1.4;
+}
+.card p{
+  margin:0;
+  font-size:15px;
+  color:#6b6258;
+}
+.archive{
+  background:#fffaf3;
+  border-radius:26px;
+  padding:26px 24px;
+  margin:34px 0;
+}
+.archive h2{
+  margin:0 0 18px;
+  font-size:27px;
+}
+.archive ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.archive li{
+  border-top:1px solid #e6dccf;
+  padding:15px 0;
+  font-size:18px;
+}
+.closing{
+  text-align:center;
+  color:#6b6258;
+  font-size:18px;
+  padding:46px 10px 24px;
+}
+footer{
+  text-align:center;
+  color:#9a8f83;
+  font-size:13px;
+  padding:32px 10px 44px;
+}
+@media(min-width:720px){
+  header h1{font-size:72px}
+  header p{font-size:21px}
+  .grid{grid-template-columns:1fr 1fr}
+  .feature-img{height:330px}
+  .feature h2{font-size:40px}
 }
 </style>
 </head>
@@ -34,85 +169,135 @@ summary{font-size:20px}
 <body>
 
 <header>
-<h1>Enlighten<br>Life</h1>
-<div class="sub">삶 전체가 명상이 되는 길</div>
-<div class="intro">
-명상가로 살아온 시간,<br>
-커피를 볶으며 보낸 날들,<br>
-부모님과 함께한 사랑,<br>
-그리고 삶이 들려준 이야기들.
-</div>
+  <h1>Enlighten<br>Life</h1>
+  <p>삶 전체가 명상이 되는 길. 명상, 커피, 부모님, 여행과 언어의 기록.</p>
 </header>
 
 <nav>
-<a href="#meditation">명상</a>
-<a href="#coffee">커피</a>
-<a href="#family">부모님</a>
-<a href="#journey">여행</a>
-<a href="#language">언어</a>
+  <a href="#latest">최신 글</a>
+  <a href="#meditation">명상</a>
+  <a href="#coffee">커피</a>
+  <a href="#family">부모님</a>
+  <a href="#journey">여행</a>
+  <a href="#language">언어</a>
 </nav>
 
 <main>
 
-<section id="meditation">
-<h2>🌿 명상가의 기록</h2>
-<div class="desc">삶과 세계, 사랑과 존재를 관통하는 여정</div>
-<details><summary>1. 명상이란 무엇인가</summary><p>명상은 특별한 수행이 아니라, 삶 속에서 자신을 알아가고 본래의 자리로 돌아가는 과정입니다.</p></details>
-<details><summary>2. 왜 시작점으로 돌아가야 하는가</summary><p>가장 깊은 답은 멀리 나아가는 길이 아니라 처음의 자리로 돌아가는 길 위에 있습니다.</p></details>
-<details><summary>3. 세상은 어떤 곳인가</summary><p>세상은 우리가 살아가는 공간인 동시에 우리 자신을 비추어 보는 거울입니다.</p></details>
-<details><summary>4. 사랑의 언어</summary><p>영혼의 연결과 소통, 그리고 존재의 방식에 대한 기록입니다.</p></details>
-<details><summary>5. 통과의 기록</summary><p>불길을 통과한 자리에서, 한 생의 여정이 마무리되는 순간을 기록합니다.</p></details>
+<div id="latest" class="section-title">Latest Essays</div>
+
+<a class="feature" href="#">
+  <div class="feature-img">🌿</div>
+  <div class="feature-body">
+    <div class="date">2026.06.20 · 명상</div>
+    <h2>명상이란 무엇인가</h2>
+    <p>명상은 특별한 사람이 하는 수행이 아니라, 삶 속에서 자신을 알아가고 본래의 자리로 돌아가는 과정입니다.</p>
+  </div>
+</a>
+
+<div class="grid">
+  <a class="card" href="#">
+    <div class="thumb">☕</div>
+    <div class="card-body">
+      <div class="date">2026.06.18 · 커피</div>
+      <h3>커피를 볶던 날</h3>
+      <p>연기 속에서 향기가 피어나던 순간, 기다림은 하나의 수행이 되었습니다.</p>
+    </div>
+  </a>
+
+  <a class="card" href="#">
+    <div class="thumb">👨‍👩‍👦</div>
+    <div class="card-body">
+      <div class="date">2026.06.15 · 부모님</div>
+      <h3>부모님의 생의 빛</h3>
+      <p>두 존재를 통해 흘러온 나의 시간과 가장 깊은 사랑에 대한 기록입니다.</p>
+    </div>
+  </a>
+
+  <a class="card" href="#">
+    <div class="thumb">🚶</div>
+    <div class="card-body">
+      <div class="date">2026.06.12 · 여행</div>
+      <h3>시작도 끝도 없는 시간 속에서</h3>
+      <p>쉼 없이 열리는 세상 속에서 끝없이 펼쳐지는 생의 풍경을 기록합니다.</p>
+    </div>
+  </a>
+
+  <a class="card" href="#">
+    <div class="thumb">✨</div>
+    <div class="card-body">
+      <div class="date">2026.06.10 · 언어</div>
+      <h3>사랑이 통하고 언어가 춤을 춘다</h3>
+      <p>말 있음과 없음 사이에서 피어나는 소소한 흔적들.</p>
+    </div>
+  </a>
+</div>
+
+<section id="meditation" class="archive">
+  <h2>🌿 명상가의 기록</h2>
+  <ul>
+    <li>명상이란 무엇인가</li>
+    <li>왜 시작점으로 돌아가야 하는가</li>
+    <li>세상은 어떤 곳인가</li>
+    <li>사랑의 언어</li>
+    <li>통과의 기록</li>
+  </ul>
 </section>
 
-<section id="coffee">
-<h2>☕ 커피쟁이, 볶고 내리고</h2>
-<div class="desc">커피 볶는 연기에 빠져 향기로 써내린 기다림의 순간들에 대하여</div>
-<details><summary>1. 커피가 내 삶에 들어오던 날</summary><p>뽀얀 연기가 나를 유혹했다.</p></details>
-<details><summary>2. 스승을 만나다</summary><p>방이동의 한 로스터리 커피숍, 불로 달궈 향기로 터져 나오던 순간들.</p></details>
-<details><summary>3. 불과 향기 안에서 배운 것들</summary><p>생두와 불, 기다림과 시간 속에서 배워간 것들.</p></details>
-<details><summary>4. 갓볶은 커피의 향기</summary><p>커피 씨앗이 불을 품고 뿜어낸 첫 번째 향기, 그 신선함에 대하여.</p></details>
-<details><summary>5. 커피와 함께한 시간들</summary><p>향기 속에 머문 사람들, 웃음 가득했던 시절.</p></details>
-<details><summary>6. 언제나 그 자리에</summary><p>변함없이 흐르는 향기로운 생의 여정.</p></details>
-<details><summary>7. 담미, 삶의 맛과 향을 담아서</summary><p>커피와 차로 그려낸 소박한 생의 여로.</p></details>
+<section id="coffee" class="archive">
+  <h2>☕ 커피쟁이, 볶고 내리고</h2>
+  <ul>
+    <li>커피가 내 삶에 들어오던 날</li>
+    <li>스승을 만나다</li>
+    <li>불과 향기 안에서 배운 것들</li>
+    <li>갓볶은 커피의 향기</li>
+    <li>담미, 삶의 맛과 향을 담아서</li>
+  </ul>
 </section>
 
-<section id="family">
-<h2>👨‍👩‍👦 부모님과 함께한 이야기</h2>
-<div class="desc">삶의 시작부터 지금까지, 가장 깊은 사랑과 가장 긴 시간을 함께한 두 존재에 대한 기록</div>
-<details><summary>1. 내가 처음으로 선택한 두 사람</summary><p>생의 시작과 함께 찾아온 인연.</p></details>
-<details><summary>2. 평범한 일상 속, 보석처럼 숨어 있던 사랑</summary><p>시간이 흐른 뒤 발견하는 생의 진리.</p></details>
-<details><summary>3. 생의 축, 그 중심을 세우며</summary><p>아버지라는 존재에 대하여.</p></details>
-<details><summary>4. 사랑을 몸소 실천하며 안내하며</summary><p>어머니라는 존재에 대하여.</p></details>
-<details><summary>5. 생의 빛</summary><p>눈이 부시게 빛나는 삶, 모든 것이 사랑이었음을.</p></details>
+<section id="family" class="archive">
+  <h2>👨‍👩‍👦 부모님과 함께한 이야기</h2>
+  <ul>
+    <li>내가 처음으로 선택한 두 사람</li>
+    <li>평범한 일상 속 사랑</li>
+    <li>아버지라는 존재</li>
+    <li>어머니라는 존재</li>
+    <li>생의 빛</li>
+  </ul>
 </section>
 
-<section id="journey">
-<h2>🚶 생을 여행하며</h2>
-<div class="desc">쉼없이 열리는 세상 속에서, 끝없이 펼쳐지는 생의 풍경을 기록하며</div>
-<details><summary>1. 시작도 끝도 없는 시간 속에서</summary><p>삶이 안내하는 방향을 향해 흘러가기.</p></details>
-<details><summary>2. 이상한 아이</summary><p>세상 속 또 다른 세상 안에서.</p></details>
-<details><summary>3. 인고의 시간, 기다림</summary><p>결혼을 가장한 수행의 시작.</p></details>
-<details><summary>4. 칼춤을 추다</summary><p>세상을 찢고 나를 깨뜨리며.</p></details>
-<details><summary>5. 첫 번째 안내자</summary><p>인도에서 만난 청년, 시작을 알리며.</p></details>
-<details><summary>6. 보석 같은 기억들</summary><p>스리랑카에서 만난 세 번의 전생 이야기.</p></details>
-<details><summary>7. 함께하는 열두 명의 제자</summary><p>이어진 생의 순환으로.</p></details>
+<section id="journey" class="archive">
+  <h2>🚶 생을 여행하며</h2>
+  <ul>
+    <li>시작도 끝도 없는 시간 속에서</li>
+    <li>이상한 아이</li>
+    <li>인고의 시간, 기다림</li>
+    <li>칼춤을 추다</li>
+    <li>첫 번째 안내자</li>
+    <li>보석 같은 기억들</li>
+  </ul>
 </section>
 
-<section id="language">
-<h2>✨ 사랑이 통하고 언어가 춤을 춘다</h2>
-<div class="desc">언어를 초월해 말 있음과 없음이 녹아든 소소한 흔적들</div>
-<details><summary>이곳은 앞으로 채워질 공간입니다</summary><p>시, 짧은 산문, 명상 노트, 꿈의 기록, 순간의 통찰을 담습니다.</p></details>
+<section id="language" class="archive">
+  <h2>✨ 사랑이 통하고 언어가 춤을 춘다</h2>
+  <ul>
+    <li>시</li>
+    <li>짧은 산문</li>
+    <li>명상 노트</li>
+    <li>꿈의 기록</li>
+    <li>순간의 통찰</li>
+  </ul>
 </section>
 
 <div class="closing">
-깊은 숨이 시작되는 순간,<br>
-우리는 본래의 고요로 돌아갑니다.
+  깊은 숨이 시작되는 순간,<br>
+  우리는 본래의 고요로 돌아갑니다.
 </div>
 
 </main>
 
 <footer>
-Enlighten Life · 삶 전체가 명상이 되는 길
+  Enlighten Life · 삶 전체가 명상이 되는 길
 </footer>
 
 </body>

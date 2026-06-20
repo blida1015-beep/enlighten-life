@@ -4,301 +4,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enlighten Life</title>
-
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  background:#f7f1e8;
-  color:#2d2923;
-  font-family:Georgia,"Noto Serif KR",serif;
-  line-height:1.75;
-}
-a{color:inherit;text-decoration:none}
-header{
-  padding:86px 22px 70px;
-  text-align:center;
-  background:linear-gradient(#e9decc,#faf5ed);
-}
-header h1{
-  margin:0;
-  font-size:52px;
-  line-height:1;
-  letter-spacing:-1px;
-}
-header p{
-  margin:24px auto 0;
-  max-width:520px;
-  font-size:18px;
-  color:#6b6258;
-}
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#fffaf3;
-  border-bottom:1px solid #e4d8c8;
-  text-align:center;
-  padding:13px 8px;
-}
-nav a{
-  display:inline-block;
-  margin:4px 9px;
-  font-size:15px;
-  color:#4a433a;
-}
-main{
-  max-width:920px;
-  margin:auto;
-  padding:36px 18px;
-}
-.section-title{
-  font-size:13px;
-  letter-spacing:2px;
-  color:#8a8178;
-  margin:28px 0 18px;
-  text-transform:uppercase;
-}
-.feature{
-  background:#fffaf3;
-  border-radius:30px;
-  overflow:hidden;
-  margin-bottom:38px;
-  box-shadow:0 18px 40px rgba(70,50,30,.08);
-}
-.feature-img{
-  height:250px;
-  background:linear-gradient(135deg,#d9c7aa,#f8efe2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:54px;
-}
-.feature-body{
-  padding:30px 26px 34px;
-}
-.date{
-  font-size:13px;
-  color:#9a8f83;
-  margin-bottom:10px;
-}
-.feature h2{
-  margin:0 0 14px;
-  font-size:31px;
-  line-height:1.35;
-}
-.feature p{
-  margin:0;
-  color:#6b6258;
-  font-size:17px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:22px;
-}
-.card{
-  background:#fffaf3;
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 10px 28px rgba(70,50,30,.06);
-}
-.thumb{
-  height:145px;
-  background:linear-gradient(135deg,#eee1ce,#fbf6ee);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:42px;
-}
-.card-body{
-  padding:22px 22px 26px;
-}
-.card h3{
-  margin:0 0 10px;
-  font-size:24px;
-  line-height:1.4;
-}
-.card p{
-  margin:0;
-  font-size:15px;
-  color:#6b6258;
-}
-.archive{
-  background:#fffaf3;
-  border-radius:26px;
-  padding:26px 24px;
-  margin:34px 0;
-}
-.archive h2{
-  margin:0 0 18px;
-  font-size:27px;
-}
-.archive ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-.archive li{
-  border-top:1px solid #e6dccf;
-  padding:15px 0;
-  font-size:18px;
-}
-.closing{
-  text-align:center;
-  color:#6b6258;
-  font-size:18px;
-  padding:46px 10px 24px;
-}
-footer{
-  text-align:center;
-  color:#9a8f83;
-  font-size:13px;
-  padding:32px 10px 44px;
-}
-@media(min-width:720px){
-  header h1{font-size:72px}
-  header p{font-size:21px}
-  .grid{grid-template-columns:1fr 1fr}
-  .feature-img{height:330px}
-  .feature h2{font-size:40px}
-}
+body{margin:0;background:#f7f1e8;color:#2d2923;font-family:Georgia,"Noto Serif KR",serif;line-height:1.8}
+a{text-decoration:none;color:inherit}
+header{padding:80px 22px 65px;text-align:center;background:linear-gradient(#eadfce,#faf5ed)}
+header h1{font-size:58px;line-height:1;margin:0}
+header p{font-size:17px;color:#6b6258}
+nav{position:sticky;top:0;background:#fffaf3;border-bottom:1px solid #e5d8c8;text-align:center;padding:12px 6px;z-index:5}
+nav button{border:0;background:none;margin:4px 7px;font-size:14px;color:#443d35}
+main{max-width:920px;margin:auto;padding:34px 18px}
+.grid{display:grid;grid-template-columns:1fr;gap:22px}
+.card{background:#fffaf3;border-radius:24px;padding:24px;box-shadow:0 10px 26px rgba(70,50,30,.07)}
+.card small{color:#9a8f83}
+.card h2{font-size:24px;line-height:1.35;margin:10px 0}
+.card p{color:#6b6258;font-size:15px}
+.tag{font-size:13px;color:#8a6f52}
+.article{display:none;background:#fffaf3;border-radius:24px;padding:28px;margin-top:24px}
+.article h1{font-size:34px;line-height:1.3}
+.article .body{white-space:pre-line;font-size:18px}
+.back{margin-top:30px;color:#8a6f52}
+footer{text-align:center;color:#9a8f83;font-size:13px;padding:40px}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}header h1{font-size:76px}}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Enlighten<br>Life</h1>
-  <p>삶 전체가 명상이 되는 길. 명상, 커피, 부모님, 여행과 언어의 기록.</p>
+<h1>Enlighten<br>Life</h1>
+<p>삶 전체가 명상이 되는 길</p>
+<p>명상 · 커피 · 부모님 · 생의 여행 · 시와 언어</p>
 </header>
 
 <nav>
-  <a href="#latest">최신 글</a>
-  <a href="#meditation">명상</a>
-  <a href="#coffee">커피</a>
-  <a href="#family">부모님</a>
-  <a href="#journey">여행</a>
-  <a href="#language">언어</a>
+<button onclick="filterPosts('all')">전체</button>
+<button onclick="filterPosts('명상')">명상</button>
+<button onclick="filterPosts('커피')">커피</button>
+<button onclick="filterPosts('부모님')">부모님</button>
+<button onclick="filterPosts('생의 여행')">생의 여행</button>
+<button onclick="filterPosts('시와 언어')">시와 언어</button>
 </nav>
 
 <main>
-
-<div id="latest" class="section-title">Latest Essays</div>
-
-<a class="feature" href="#">
-  <div class="feature-img">🌿</div>
-  <div class="feature-body">
-    <div class="date">2026.06.20 · 명상</div>
-    <h2>명상이란 무엇인가</h2>
-    <p>명상은 특별한 사람이 하는 수행이 아니라, 삶 속에서 자신을 알아가고 본래의 자리로 돌아가는 과정입니다.</p>
-  </div>
-</a>
-
-<div class="grid">
-  <a class="card" href="#">
-    <div class="thumb">☕</div>
-    <div class="card-body">
-      <div class="date">2026.06.18 · 커피</div>
-      <h3>커피를 볶던 날</h3>
-      <p>연기 속에서 향기가 피어나던 순간, 기다림은 하나의 수행이 되었습니다.</p>
-    </div>
-  </a>
-
-  <a class="card" href="#">
-    <div class="thumb">👨‍👩‍👦</div>
-    <div class="card-body">
-      <div class="date">2026.06.15 · 부모님</div>
-      <h3>부모님의 생의 빛</h3>
-      <p>두 존재를 통해 흘러온 나의 시간과 가장 깊은 사랑에 대한 기록입니다.</p>
-    </div>
-  </a>
-
-  <a class="card" href="#">
-    <div class="thumb">🚶</div>
-    <div class="card-body">
-      <div class="date">2026.06.12 · 여행</div>
-      <h3>시작도 끝도 없는 시간 속에서</h3>
-      <p>쉼 없이 열리는 세상 속에서 끝없이 펼쳐지는 생의 풍경을 기록합니다.</p>
-    </div>
-  </a>
-
-  <a class="card" href="#">
-    <div class="thumb">✨</div>
-    <div class="card-body">
-      <div class="date">2026.06.10 · 언어</div>
-      <h3>사랑이 통하고 언어가 춤을 춘다</h3>
-      <p>말 있음과 없음 사이에서 피어나는 소소한 흔적들.</p>
-    </div>
-  </a>
-</div>
-
-<section id="meditation" class="archive">
-  <h2>🌿 명상가의 기록</h2>
-  <ul>
-    <li>명상이란 무엇인가</li>
-    <li>왜 시작점으로 돌아가야 하는가</li>
-    <li>세상은 어떤 곳인가</li>
-    <li>사랑의 언어</li>
-    <li>통과의 기록</li>
-  </ul>
-</section>
-
-<section id="coffee" class="archive">
-  <h2>☕ 커피쟁이, 볶고 내리고</h2>
-  <ul>
-    <li>커피가 내 삶에 들어오던 날</li>
-    <li>스승을 만나다</li>
-    <li>불과 향기 안에서 배운 것들</li>
-    <li>갓볶은 커피의 향기</li>
-    <li>담미, 삶의 맛과 향을 담아서</li>
-  </ul>
-</section>
-
-<section id="family" class="archive">
-  <h2>👨‍👩‍👦 부모님과 함께한 이야기</h2>
-  <ul>
-    <li>내가 처음으로 선택한 두 사람</li>
-    <li>평범한 일상 속 사랑</li>
-    <li>아버지라는 존재</li>
-    <li>어머니라는 존재</li>
-    <li>생의 빛</li>
-  </ul>
-</section>
-
-<section id="journey" class="archive">
-  <h2>🚶 생을 여행하며</h2>
-  <ul>
-    <li>시작도 끝도 없는 시간 속에서</li>
-    <li>이상한 아이</li>
-    <li>인고의 시간, 기다림</li>
-    <li>칼춤을 추다</li>
-    <li>첫 번째 안내자</li>
-    <li>보석 같은 기억들</li>
-  </ul>
-</section>
-
-<section id="language" class="archive">
-  <h2>✨ 사랑이 통하고 언어가 춤을 춘다</h2>
-  <ul>
-    <li>시</li>
-    <li>짧은 산문</li>
-    <li>명상 노트</li>
-    <li>꿈의 기록</li>
-    <li>순간의 통찰</li>
-  </ul>
-</section> 
-
-<div class="closing">
-  깊은 숨이 시작되는 순간,<br>
-  우리는 본래의 고요로 돌아갑니다.
-</div>
-
+<section id="list" class="grid"></section>
+<section id="article" class="article"></section>
 </main>
 
 <footer>
-  Enlighten Life · 삶 전체가 명상이 되는 길
+Enlighten Life · 삶 전체가 명상이 되는 길
 </footer>
+
+<script>
+const POSTS = [
+  {
+    title: "명상이란 무엇인가",
+    category: "명상",
+    date: "2026.06.20",
+    excerpt: "여기에 짧은 소개문을 씁니다.",
+    body: `여기에 본문을 씁니다.
+
+줄바꿈도 그대로 적용됩니다.
+
+글은 선생님이 직접 넣으면 됩니다.`
+  },
+  {
+    title: "커피가 내 삶에 들어오던 날",
+    category: "커피",
+    date: "2026.06.20",
+    excerpt: "여기에 짧은 소개문을 씁니다.",
+    body: `여기에 본문을 씁니다.`
+  },
+  {
+    title: "내가 처음으로 선택한 두 사람",
+    category: "부모님",
+    date: "2026.06.20",
+    excerpt: "여기에 짧은 소개문을 씁니다.",
+    body: `여기에 본문을 씁니다.`
+  },
+  {
+    title: "시작도 끝도 없는 시간 속에서",
+    category: "생의 여행",
+    date: "2026.06.20",
+    excerpt: "여기에 짧은 소개문을 씁니다.",
+    body: `여기에 본문을 씁니다.`
+  },
+  {
+    title: "시",
+    category: "시와 언어",
+    date: "2026.06.20",
+    excerpt: "여기에 짧은 소개문을 씁니다.",
+    body: `여기에 본문을 씁니다.`
+  }
+];
+
+let current = POSTS;
+
+function renderList(posts){
+  document.getElementById("article").style.display="none";
+  const list=document.getElementById("list");
+  list.style.display="grid";
+  list.innerHTML=posts.map((post,i)=>`
+    <a class="card" onclick="openPost(${POSTS.indexOf(post)})">
+      <small>${post.date} · ${post.category}</small>
+      <h2>${post.title}</h2>
+      <p>${post.excerpt}</p>
+      <div class="tag">계속 읽기 →</div>
+    </a>
+  `).join("");
+}
+
+function filterPosts(category){
+  current = category==="all" ? POSTS : POSTS.filter(p=>p.category===category);
+  renderList(current);
+}
+
+function openPost(index){
+  const post=POSTS[index];
+  document.getElementById("list").style.display="none";
+  const article=document.getElementById("article");
+  article.style.display="block";
+  article.innerHTML=`
+    <small>${post.date} · ${post.category}</small>
+    <h1>${post.title}</h1>
+    <div class="body">${post.body}</div>
+    <div class="back" onclick="renderList(current)">← 목록으로 돌아가기</div>
+  `;
+  window.scrollTo(0,0);
+}
+
+renderList(POSTS);
+</script>
 
 </body>
 </html>
